@@ -1,0 +1,14 @@
+{
+  "name": "epoch-api-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anthony Kinsey <anthonyjk@gmail.com> (http://github.com/akinsey)",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.3.3"
+  }
+}
