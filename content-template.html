@@ -2,7 +2,7 @@
 <% apiData.forEach(function(data) { %>
 
 <% if (curGroup !== data.group) { curGroup = data.group; %><h5 class="clear-fix" id="<%= curGroup.toLowerCase() %>"><%= curGroup %></h5> <% } %>
-<h6 class="clear-fix" id="<%= data.name.toLowerCase() %>"><%= data.group %> - <%= data.title %> <pre class="code-block <%= data.type.toLowerCase() %>"><%= data.type %></pre><a class="back-to-top" href="#top"><i class="fa fa-arrow-up"> Back to Top</i></a></h6>
+<h6 class="clear-fix" id="<%= data.name.toLowerCase() %>"><%= data.group %> - <%= data.title %> <pre class="code-block <%= data.type.toLowerCase() %>"><%= data.type %></pre><a class="back-to-top" href="#top"><i class="fa fa-arrow-up"> <span>Back to Top</span></i></a></h6>
 <p><%= data.description.replace('</p>', '').replace('<p>', '').trim() %></p>
 <% if (data.permission) { %>
 <p><strong>Permissions:</strong> <%= data.permission[0].name %></p>
