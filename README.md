@@ -1,6 +1,6 @@
 # HOW TO USE
 
-* apidoc -i ../epoch-latest/epochtalk -o doc
+* apidoc -i `path to epochtalk` -o doc
 
 * copy ./doc/api_data.json to ./
 
