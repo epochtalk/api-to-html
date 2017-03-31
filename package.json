@@ -9,6 +9,7 @@
   "author": "Anthony Kinsey <anthonyjk@gmail.com> (http://github.com/akinsey)",
   "license": "ISC",
   "dependencies": {
+    "apidoc": "^0.17.5",
     "ejs": "^2.3.3"
   }
 }

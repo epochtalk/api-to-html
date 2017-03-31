@@ -1,6 +1,8 @@
 # HOW TO USE
 
-* apidoc -i `path to epochtalk` -o doc
+* npm install
+
+* ./node_modules/apidoc/bin/apidoc -i `path to epochtalk` -o doc
 
 * copy ./doc/api_data.json to ./
 
