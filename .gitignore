@@ -2,3 +2,5 @@
 nav-output.html
 content-output.html
 /doc
+.env
+api_data.json
