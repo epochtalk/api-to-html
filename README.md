@@ -1,8 +1,22 @@
 # HOW TO USE
 
-* npm install
+## Configuration
 
-* ./node_modules/apidoc/bin/apidoc -i `path to epochtalk` -o doc
+.env
+
+```
+EPOCHTALK_PATH='path to epochtalk'
+```
+
+## Running
+
+* `npm install`
+
+* `npm run test-env`
+
+    * (outputs your EPOCHTALK_PATH if it is set in .env)
+
+* `npm run gen`
 
 * copy ./doc/api_data.json to ./
 
