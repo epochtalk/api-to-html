@@ -35,7 +35,7 @@ server.route({
       },
       handler: function (request, reply) {
         if (request.payload.api_key === apiKey) {
-          var opts = { src: epochtalkPath,  dest: 'doc', excludeFilters: ['node_modules'] };
+          var opts = { src: epochtalkPath,  dest: 'doc', excludeFilters: ['node_modules', 'public'] };
           if (apiDoc.createDoc(opts)) {
             reply('Docs Generated');
           }
