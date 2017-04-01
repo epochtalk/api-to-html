@@ -1,6 +1,7 @@
+var path = require('path');
 var fs = require('fs');
 var ejs = require('ejs');
-var apiData = JSON.parse(fs.readFileSync('api_data.json', 'utf8'));
+var apiData = JSON.parse(fs.readFileSync(path.join(__dirname, 'doc', 'api_data.json'), 'utf8'));
 
 var sections = function() {
   var unique = [];
