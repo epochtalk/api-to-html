@@ -12,6 +12,8 @@ const server = new Hapi.Server();
 
 var epochtalkPath = process.env.EPOCHTALK_PATH;
 var apiKey = process.env.API_KEY;
+var port = process.env.PORT || 3000;
+var host = process.env.HOST || 'localhost';
 
 if (!epochtalkPath) {
   console.error('No EPOCHTALK_PATH in ENV!');
@@ -25,7 +27,7 @@ if (!apiKey) {
   process.exit(1);
 }
 
-server.connection({ port: 3000, host: 'localhost' });
+server.connection({ port, host });
 
 server.route({
   method: 'POST',
