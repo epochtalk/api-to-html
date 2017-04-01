@@ -5,21 +5,20 @@
 .env
 
 ```
-EPOCHTALK_PATH='path to epochtalk'
+EPOCHTALK_PATH=path/to/epochtalk
+API_KEY=somekeylol
+HOST=localhost
+PORT=6969
 ```
 
 ## Running
 
 * `npm install`
 
-* `npm run test-env`
+* `npm run serve`
 
-    * (outputs your EPOCHTALK_PATH if it is set in .env)
+  Hit this thang on `/generate` with a POST request, containing `api_key`
 
-* `npm run gen`
-
-* copy ./doc/api_data.json to ./
-
-* run node index.js
+## Furthermore...
 
 * copy content-output.html and nav-output.html into epochtalk.org site template.
