@@ -2,6 +2,8 @@
 
 ## Configuration
 
+`cp example.env .env`
+
 .env
 
 ```
