@@ -1,4 +1,19 @@
 'use strict';
+require('dotenv').load();
+var path = require('path');
+var epochtalkPath = process.env.EPOCHTALK_PATH;
+var apiKey = process.env.API_KEY;
+if (!epochtalkPath) {
+  console.error('No EPOCHTALK_PATH in ENV!');
+  process.exit(1);
+}
+else {
+ epochtalkPath = path.resolve(epochtalkPath);
+}
+if (!apiKey) {
+  console.error('No API_KEY in ENV!');
+  process.exit(1);
+}
 
 const Hapi = require('hapi');
 const Joi = require('joi');
@@ -19,11 +34,14 @@ server.route({
         })
       },
       handler: function (request, reply) {
-        var opts = { src:'../epoch-latest/epochtalk',  dest: 'doc', excludeFilters: ['node_modules'] };
-        if (apiDoc.createDoc(opts)) {
-          reply('Docs Generated');
+        if (request.payload.api_key === apiKey) {
+          var opts = { src: epochtalkPath,  dest: 'doc', excludeFilters: ['node_modules'] };
+          if (apiDoc.createDoc(opts)) {
+            reply('Docs Generated');
+          }
+          else { reply(Boom.badImplementation('Error: api doc generation failed')); }
         }
-        else { reply(Boom.badImplementation('Error: api doc generation failed')); }
+        else { reply(Boom.unauthorized('Go fuck yourself')); }
       }
     }
 });
