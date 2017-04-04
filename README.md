@@ -13,6 +13,10 @@ PORT=6969
 
 ## Running
 
+* `node index`
+
+### Or
+
 * `npm install`
 
 * `npm run serve`
