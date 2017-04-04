@@ -51,7 +51,7 @@ server.route({
           reply(Boom.badImplementation('Error: api doc generation failed'));
         });
       }
-      else { reply(Boom.unauthorized('Invalid API Key. Go fuck yourself')); }
+      else { reply(Boom.unauthorized('Invalid API Key.')); }
     }
   }
 });
