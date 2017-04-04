@@ -2,6 +2,7 @@
   "name": "epoch-api-template",
   "version": "1.0.0",
   "description": "",
+  "main": "index",
   "scripts": {
     "serve": "node server",
     "test-env": ". .env && echo EPOCHTALK_PATH=$EPOCHTALK_PATH",
