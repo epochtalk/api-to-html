@@ -31,25 +31,30 @@ var subSections = function() {
 
 function generate() {
   return writeFile(
-    'nav-output.html',
+    'nav-output.ejs',
     ejs.render(
-      fs.readFileSync('nav-template.html', 'utf8'),
+      fs.readFileSync('nav-template.ejs', 'utf8'),
       { sections: sections(), subSections: subSections() }
     )
   )
   .then(function() {
     return writeFile(
-        'content-output.html',
+        'content-output.ejs',
         ejs.render(
-          fs.readFileSync('content-template.html', 'utf8'),
+          fs.readFileSync('content-template.ejs', 'utf8'),
           { apiData: apiData }
         )
       );
   })
   .then(function() {
+    return ejs.renderFile(__dirname + '/api-template.ejs', 'utf8', function(err, data) {
+      if (err) { return err; }
+      return writeFile('api.html', data);
+    });
+  })
+  .then(function() {
     return {
-      nav: path.join(__dirname, 'nav-output.html'),
-      content: path.join(__dirname, 'content-output.html')
+      output: path.join(__dirname, 'api.html')
     };
   });
 }

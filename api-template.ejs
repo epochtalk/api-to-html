@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Epochtalk - API</title>
+  <meta name="description" content="Next generation forum software.">
+  <meta name="author" content="Slickage Studios">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div class="nav-wrap" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="one columns logo">
+          <a href="index.html">
+            <i class="fa fa-list-ul"><span class="logo-sub">pochtalk</span></i>
+          </a>
+        </div>
+        <div class="eleven columns">
+          <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="api.html" class="active">API</a></li>
+            <li><a href="map.html">Roadmap</a></li>
+            <li><a target="_blank" href="http://forum.epochtalk.org">Forum</a></li>
+            <!--<li><a href="contrib.html">Contribute</a></li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Page Layout -->
+
+  <div class="section docs">
+    <div class="container">
+      <div class="row">
+        <div class="three columns api docs-nav fixed">
+          <% include nav-output %>
+        </div>
+        <div class="nine columns docs-content">
+          <% include content-output %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="http://github.com/epochtalk/epochtalk">GitHub</a> · &copy; 2017 Epochtalk
+  </footer>
+
+  <!-- Scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/scrollspy.js"></script>
+  <script src="js/stickynav.js"></script>
+
+</body>
+</html>
