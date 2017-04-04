@@ -1,5 +1,3 @@
-# HOW TO USE
-
 ## Configuration
 
 `cp example.env .env`
