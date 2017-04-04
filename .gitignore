@@ -1,6 +1,6 @@
 /node_modules
-nav-output.html
-content-output.html
+nav-output.ejs
+content-output.ejs
 /doc
 .env
 api_data.json
