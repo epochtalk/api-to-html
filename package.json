@@ -2,14 +2,22 @@
   "name": "epoch-api-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index",
   "scripts": {
+    "serve": "node server",
+    "test-env": ". .env && echo EPOCHTALK_PATH=$EPOCHTALK_PATH",
+    "gen": ". .env && ./node_modules/apidoc/bin/apidoc -i $EPOCHTALK_PATH -o doc -e node_modules -e public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anthony Kinsey <anthonyjk@gmail.com> (http://github.com/akinsey)",
   "license": "ISC",
   "dependencies": {
     "apidoc": "^0.17.5",
-    "ejs": "^2.3.3"
+    "bluebird": "^3.5.0",
+    "boom": "^4.3.1",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.3.3",
+    "hapi": "^16.1.1",
+    "joi": "^10.3.3"
   }
 }

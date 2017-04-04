@@ -1,11 +1,28 @@
-# HOW TO USE
+## Configuration
 
-* npm install
+`cp example.env .env`
 
-* ./node_modules/apidoc/bin/apidoc -i `path to epochtalk` -o doc
+.env
 
-* copy ./doc/api_data.json to ./
+```
+EPOCHTALK_PATH=path/to/epochtalk
+API_KEY=somekeylol
+HOST=localhost
+PORT=6969
+```
 
-* run node index.js
+## Running
+
+* `node index`
+
+### Or
+
+* `npm install`
+
+* `npm run serve`
+
+  Hit this thang on `/generate` with a POST request, containing `api_key`
+
+## Furthermore...
 
 * copy content-output.html and nav-output.html into epochtalk.org site template.
