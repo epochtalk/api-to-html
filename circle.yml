@@ -6,9 +6,20 @@ jobs:
     working_directory: ~/api-to-html
     steps:
       - checkout
-      - run:
-          name: Install apt packages
-          command: apt-get update && apt-get install unzip
+      -run:
+        name: Get aws cli
+        command: |
+          apt-get update \
+          && apt-get upgrade -y \
+          && apt-get install -y --no-install-recommends \
+          build-essential g++ python2.7 python2.7-dev unzip curl \
+          && rm -rf /var/lib/apt/lists/* \
+          && mkdir -p /tmp \
+          && cd /tmp \
+          && curl -O https://bootstrap.pypa.io/get-pip.py \
+          && python get-pip.py \
+          && pip install awscli \
+          && rm -f /tmp/get-pip.py
       - run:
           name: Download EpochTalk
           command: |
