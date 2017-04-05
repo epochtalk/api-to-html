@@ -7,6 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install apt packages
+          command: apt-get update && apt-get install unzip
+      - run:
           name: Download EpochTalk
           command: |
             wget https://github.com/epochtalk/epochtalk/archive/master.zip
