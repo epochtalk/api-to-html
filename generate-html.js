@@ -1,7 +1,7 @@
 var path = require('path');
 var fs = require('fs');
 var ejs = require('ejs');
-var apiData = JSON.parse(fs.readFileSync(path.join(__dirname, 'doc', 'api_data.json'), 'utf8'));
+var apiData;
 var Promise = require('bluebird');
 var writeFile = Promise.promisify(require('fs').writeFile);
 
@@ -30,6 +30,7 @@ var subSections = function() {
 
 
 function generate() {
+  apiData = JSON.parse(fs.readFileSync(path.join(__dirname, 'doc', 'api_data.json'), 'utf8'));
   return writeFile(
     'nav-output.ejs',
     ejs.render(
