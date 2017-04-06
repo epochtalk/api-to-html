@@ -6,7 +6,7 @@ var generateHtml = require(path.join(__dirname, 'generate-html'));
 var createDoc = Promise.method(require('apidoc').createDoc);
 var epochtalkPath = process.env.EPOCHTALK_PATH;
 
-var opts = { src: epochtalkPath,  dest: 'doc', excludeFilters: [__dirname, 'node_modules', 'public'] };
+var opts = { src: epochtalkPath,  dest: 'doc', excludeFilters: ['node_modules', 'public'] };
 
 return createDoc(opts)
 .then(function() {
