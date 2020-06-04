@@ -5,3 +5,4 @@ content-output.ejs
 .env
 api_data.json
 api.html
+DOCUMENTATION.md

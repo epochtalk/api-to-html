@@ -7,12 +7,14 @@
     "serve": "node server",
     "test-env": ". .env && echo EPOCHTALK_PATH=$EPOCHTALK_PATH",
     "gen": ". .env && ./node_modules/apidoc/bin/apidoc -i $EPOCHTALK_PATH -o doc -e node_modules -e public",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "apidoc-markdown -p doc -o DOCUMENTATION.md"
   },
   "author": "Anthony Kinsey <anthonyjk@gmail.com> (http://github.com/akinsey)",
   "license": "ISC",
   "dependencies": {
-    "apidoc": "^0.17.5",
+    "apidoc": "^0.23.0",
+    "apidoc-markdown": "^5.1.4",
     "bluebird": "^3.5.0",
     "boom": "^4.3.1",
     "dotenv": "^4.0.0",
